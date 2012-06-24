@@ -1,0 +1,16 @@
+{ "name": "coffee-streamline"
+, "description": "Helper for efficiently running Coffee-Streamline files."
+, "version": "0.0.0"
+, "author": "Aseem Kishore <aseem.kishore@gmail.com>"
+, "dependencies": {}
+, "devDependencies": {}
+, "engines":
+  { "node": "*"
+  }
+, "scripts": {}
+, "homepage": "https://github.com/aseemk/coffee-streamline"
+, "repository":
+  { "type": "git"
+  , "url": "git://github.com/aseemk/coffee-streamline.git"
+  }
+}
