@@ -1,16 +1,3 @@
-# coffee-streamline.coffee
-# Handler for efficiently require()-ing CoffeeScript and/or Streamline files.
-# The key word is efficiently: caches compiled code to prevent recompilation.
-#
-# Note that Streamline does cache compilation output natively, but only if you
-# keep the output file around next to the source file, which sucks since it
-# clutters up source control or requires manual ignoring of each output file.
-# This library thus mimics much of Streamline's caching logic, but stores
-# output files in a cache directory instead. Many thanks to Bruno Jouhier!
-#
-# Usage:
-# require('coffee-streamline');
-
 fs = require 'fs'
 path = require 'path'
 
