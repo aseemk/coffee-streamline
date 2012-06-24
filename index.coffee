@@ -8,13 +8,8 @@
 # This library thus mimics much of Streamline's caching logic, but stores
 # output files in a cache directory instead. Many thanks to Bruno Jouhier!
 #
-# Usage (JS):
-# require('coffee-script');
-# require('./coffee-streamline');
-# ... [all other requires]
-#
-# TODO:
-# Make this a module so that even require('coffee-script') is unneeded.
+# Usage:
+# require('coffee-streamline');
 
 fs = require 'fs'
 path = require 'path'
