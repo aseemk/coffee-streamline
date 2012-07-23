@@ -41,6 +41,17 @@ require('./bar');   // e.g. bar._js
 require('./baz');   // e.g. baz._coffee
 ```
 
+You can also run a CoffeeScript and/or Streamline file as if it were the main
+file being executed:
+
+```js
+require('coffee-streamline').run('./app');  // e.g. app._coffee
+// within app._coffee, `module === require.main` will be true
+```
+
+Relative paths like `./app` will be resolved relative to the parent module
+just like `require()`.
+
 ## Details
 
 Cached files are stored in a `.cache` directory under the current working

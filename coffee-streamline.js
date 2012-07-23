@@ -1,4 +1,5 @@
 var FS = require('fs');
+var Module = require('module');
 var Path = require('path');
 
 function loadCoffee() {
@@ -228,3 +229,22 @@ function registerExtensions() {
 
 // and finally, do just that!
 registerExtensions();
+
+// public run() method to run files as main, by reusing the current "main"
+// module (modeled off of CoffeeScript's technique, also now Streamline's):
+exports.run = function run(path) {
+    // if relative, resolve path relative to the parent module, but either
+    // way, resolve it to a runnable Node file:
+    var path = Path.resolve(module.parent.filename, path);
+    var filename = Module._resolveFilename(path);
+
+    // clear and reset the current main module to the passed-in path:
+    var mainModule = require.main;
+    mainModule.id = filename;
+    mainModule.filename = filename;
+    mainModule.paths = Module._nodeModulePaths(Path.dirname(filename));
+    mainModule.cache = {};
+
+    // and finally, run it!
+    requireSync(mainModule, filename);
+};
