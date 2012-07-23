@@ -56,6 +56,12 @@ compilation mode (callbacks or fibers).
 
 Can/should some of this be integrated into Streamline directly?
 
+## Changelog
+
+**0.1.1** - Ported to JS for simplicity.
+
+**0.1.0** - Initial release.
+
 ## License
 
 MIT. &copy; 2012 Aseem Kishore.
