@@ -1,6 +1,6 @@
 { "name": "coffee-streamline"
 , "description": "Helper for efficiently running Coffee-Streamline files."
-, "version": "0.1.1"
+, "version": "0.1.2"
 , "author": "Aseem Kishore <aseem.kishore@gmail.com>"
 , "main": "coffee-streamline.js"
 , "dependencies": {}
