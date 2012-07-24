@@ -245,6 +245,8 @@ exports.run = function run(path) {
     mainModule.paths = Module._nodeModulePaths(Path.dirname(filename));
     mainModule.cache = {};
 
-    // and finally, run it!
-    requireSync(mainModule, filename);
+    // and finally, run it! update: go through the currently-set require()
+    // handler instead of calling requireSync() directly in order to support
+    // wrapper handlers, e.g. node-dev's which watches on require().
+    require.extensions[Path.extname(filename)](mainModule, filename);
 };
