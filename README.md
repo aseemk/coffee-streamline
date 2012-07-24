@@ -69,6 +69,10 @@ Can/should some of this be integrated into Streamline directly?
 
 ## Changelog
 
+**0.1.3** - Minor improvement to `run()` to better support [node-dev][].
+
+[node-dev]: https://github.com/fgnass/node-dev
+
 **0.1.2** - New feature: `run()` files as main!
 
 **0.1.1** - Ported to JS for simplicity.
