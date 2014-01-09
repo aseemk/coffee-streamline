@@ -1,5 +1,7 @@
 # Coffee-Streamline
 
+**DEPRECATED. No longer needed; use Streamline's `--cache` option instead.**
+
 Helper for efficiently `require()`'ing [CoffeeScript][] and/or [Streamline][]
 files. The key word is "efficiently": compiled code is cached to prevent
 recompilation on subsequent runs.
